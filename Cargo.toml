@@ -1,0 +1,22 @@
+[package]
+name = "redcardinal"
+version = "0.1.0"
+edition = "2021"
+authors = ["Elliot Alderson"]
+
+[workspace]
+members = [
+  "redcardinal-cli",
+  "redcardinal-core",
+  "redcardinal-identity",
+  "redcardinal-server",
+  "redcardinal-store",
+]
+resolver = "2"
+
+[profile.dev]
+split-debuginfo = "unpacked"
+
+[[bin]]
+name = "redcardinal"
+path = "./redcardinal-cli/src/main.rs"
